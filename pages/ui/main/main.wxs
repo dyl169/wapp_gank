@@ -1,0 +1,10 @@
+var u = {};
+
+//
+u.handleDate = function (value) {
+	var arr = value.split('T');
+	return arr[0];
+}
+
+
+module.exports = u;

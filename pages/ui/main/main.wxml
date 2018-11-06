@@ -1,0 +1,29 @@
+<!--pages/ui/main/main.wxml-->
+<wxs module="wxs" src="./main.wxs"></wxs>
+
+<view class='pageView'>
+    <!--自定义标题-->
+    <titleView/>
+
+    <!--滚动tab-->
+    <scroll-view class="navBarScroll" scroll-x scroll-into-view='{{scrollIntoView}}'>
+        <view id='navBarTitle_item{{index}}' class='navBarTitle_item {{currentTab == index ? "active" : ""}}' wx:for='{{navBarTitle}}' wx:key='index' bindtap='clickNavBarTitle' data-index='{{index}}' scroll-with-animation='{{true}}'>{{item.name}}</view>
+    </scroll-view>
+
+    <swiper class='swiper' current='{{currentTab}}' bindtap='swiperChange'>
+        <swiper-item class='swiperItem' wx:for='{{navBarTitle}}' wx:key='index'>
+            <listView class='listView' length='{{data[index].data.length}}' noMore='{{data[index].currentPage >= data[index].totalPage}}' bind:onRefresh='onRefresh' bind:onLoadMore='onLoadMore'>
+                <view class='listView_item' wx:for='{{data[index].data}}' wx:key='dataIndex' wx:for-item='dataItem' bindtap='clickItem' data-url='{{dataItem.url}}'>
+                    <view class='title'>{{dataItem.desc}}</view>
+                    <scroll-view class='imgView' scroll-x>
+                        <image class='imgItem' src='{{imageItem}}' wx:for='{{dataItem.images}}' wx:key='imageIndex' wx:for-item='imageItem' catchtap='clickPreImage' data-images='{{dataItem.images}}' data-currentsrc='{{imageItem}}'></image>
+                    </scroll-view>
+                    <view class='user'>
+                        <text>{{dataItem.who}}</text>
+                        <text>创建于：{{wxs.handleDate(dataItem.createdAt)}}</text>
+                    </view>
+                </view>
+            </listView>
+        </swiper-item>
+    </swiper>
+</view>

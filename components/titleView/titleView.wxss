@@ -1,0 +1,111 @@
+/* components/titleView.wxss */
+
+.NavBar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 20;
+}
+
+.NavBar-statusBar {
+    width: 100%;
+}
+
+.NavBar-titlebar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.capsule-holder {
+    width: 180rpx;
+    height: 100%;
+}
+
+.NavBar-SearchBar {
+    flex: 1;
+    padding: 0 16px;
+    overflow: hidden;
+}
+
+.NavBar-content {
+    display: flex;
+    flex: 1;
+    margin: 0 0 0 10px;
+    overflow: hidden;
+}
+
+.NavBar-left {
+    width: 180rpx;
+    height: 58rpx;
+    border-radius: 30rpx;
+    border: solid 1rpx rgba(0, 0, 0, 0.1);
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+}
+
+.NavBar-content-title {
+    width: calc(100vw - 360rpx);
+    height: 88rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding-left: 32rpx;
+    padding-right: 32rpx;
+}
+
+.NavBar-left-icon {
+    flex: 1;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.line_v {
+	width: 1rpx;
+	height: calc(100% - 24rpx);
+    background:rgba(0, 0, 0, 0.2);
+	margin: 12rpx 0 12rpx 0;
+}
+
+.NavBar-left-icon:active {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+.NavBar-left-icon-back {
+    width: 12rpx;
+    height: 24rpx !important;
+}
+
+.NavBar-left-icon-home {
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.NavBar-content-title .inputView {
+    width: 100%;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    border-radius: 30rpx;
+    background: #e5e5e5;
+    box-sizing: border-box;
+    padding-left: 40rpx;
+    padding-right: 40rpx;
+}
+
+.NavBar-content-title .title {
+    font-weight: bold;
+}

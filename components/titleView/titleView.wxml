@@ -1,0 +1,25 @@
+<!--components/titleBar.wxml-->
+<view class="NavBar-holder" style="height:{{totalTopHeight}}px"></view>
+<view class="NavBar">
+    <view class="NavBar-statusBar" style="height:{{statusBarHeight}}px"></view>
+    <view class="NavBar-titlebar" style="height:{{titleBarHeight}}px">
+        <view class="NavBar-content">
+            <view class="NavBar-left" wx:if='{{!firstPage}}'>
+                <view class='NavBar-left-icon' bindtap="clickBack" >
+                    <image class="NavBar-left-icon-back" src="./icon_back.svg" />
+                </view>
+				<view class='line_v'></view>
+                <view class='NavBar-left-icon' bindtap="clickHome">
+                    <image class="NavBar-left-icon-home" src="./icon_home.svg" />
+                </view>
+            </view>
+
+            <view class="NavBar-content-title" style='width:calc(100vw - {{firstPage ? 180 : 360}}rpx);'>
+                <view wx:if='{{title.length == ""}}' class='inputView' bindtap='clickSearch'>点击搜搜</view>
+                <view wx:else class='title'>{{title}}</view>
+            </view>
+
+            <view class="capsule-holder"></view>
+        </view>
+    </view>
+</view>

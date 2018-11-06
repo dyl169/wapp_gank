@@ -1,0 +1,16 @@
+/* pages/ui/login/login.wxss */
+.logoView {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20vh;
+}
+
+.logoImg {
+	width: 120rpx;
+	height: 120rpx;
+}
+
+.loginBtn {
+	margin: auto;
+}
+

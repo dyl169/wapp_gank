@@ -1,0 +1,6 @@
+{
+	"navigationBarTitleText": "搜搜",
+	"usingComponents": {
+		"titleView": "../../../components/titleView/titleView"
+	}
+}

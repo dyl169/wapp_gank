@@ -1,0 +1,15 @@
+{
+	"pages": [
+		"pages/ui/login/login",
+		"pages/ui/main/main",
+		"pages/ui/search/search",
+		"pages/ui/webView/webView"
+	],
+	"window": {
+		"backgroundTextStyle": "dark",
+		"navigationBarBackgroundColor": "#fff",
+		"navigationBarTitleText": "壹站服务",
+		"navigationBarTextStyle": "black",
+		"navigationStyle": "custom"
+	}
+}

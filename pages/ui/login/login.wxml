@@ -1,0 +1,11 @@
+<!--pages/ui/login/login.wxml-->
+<view class='pageView bg_white'>
+
+    <view class='flex_v center_v textSize_34 logoView'>
+        <image class='logoImg' src='../../../res/icon_logo.png'></image>
+        <text class='mr_t_32 textSize_34'>《壹站服务》</text>
+        <text class='mr_t_32 textSize_26'>竭诚为您服务</text>
+    </view>
+
+    <button class='btn loginBtn' open-type='getUserInfo' type='primary' bindgetuserinfo='bindGetUserInfo'>微信用户快速登录</button>
+</view>

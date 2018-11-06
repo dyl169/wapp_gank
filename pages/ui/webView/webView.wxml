@@ -1,0 +1,4 @@
+<!--pages/ui/webView/webView.wxml-->
+<view class="pageView">
+    <web-view src="{{url}}"></web-view>
+</view> 

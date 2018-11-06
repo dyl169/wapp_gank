@@ -1,0 +1,4 @@
+<!--pages/ui/search/search.wxml-->
+<view class='pageView'>
+    <titleView title='搜搜吧' />
+</view>
