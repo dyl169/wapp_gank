@@ -27,7 +27,7 @@
 }
 
 .navBarScroll .active {
-    border-bottom: solid 6rpx #f05b48;
+    border-bottom: solid 6rpx #3BB7F7;
 }
 
 .swiper, 
@@ -73,4 +73,27 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+}
+
+.addView {
+	width: 100rpx;
+	height: 100rpx;
+	border-radius: 50rpx;
+	background: #3BB7F7;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	right: 0;
+	bottom: 240rpx;
+}
+
+.addView:active {
+	background: rgba(0, 0, 0, 0.1);
+}
+
+.addView image{
+	width: 40rpx;
+	height: 40rpx;
 }

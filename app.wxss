@@ -197,6 +197,10 @@
 	color: white;
 }
 
+.textColor_red {
+	color: #f05b48;
+}
+
 /**********************基本布局**********************/
 /*基本的itemView*/
 .itemView {
@@ -247,6 +251,10 @@
 }
 
 /**********************基本按钮**********************/
+button::after {
+	border: none;
+}
+
 .btn {
 	width: 90vw;
 	height: 94rpx;

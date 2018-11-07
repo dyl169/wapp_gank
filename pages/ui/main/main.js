@@ -1,5 +1,5 @@
 // pages/ui/main/main.js
-let http = require('../../../utils/http.js');
+let base = getApp().constants;
 let that = null;
 Page({
 
@@ -83,6 +83,15 @@ Page({
 	},
 
 	/**
+	 * 添加干货
+	 */
+	clickAdd:function(){
+		wx.navigateTo({
+			url: '../add/add',
+		})
+	},
+
+	/**
 	 * 	点击头部导航栏
 	 */
 	clickNavBarTitle: function (e) {
@@ -145,7 +154,7 @@ Page({
 	httpGetData: function (index, callback) {
 		var url = that.data.navBarTitle[index].url + '/' + that.data.navBarTitle[index].size + '/' + that.data.navBarTitle[index].page;
 		var currentPage = that.data.navBarTitle[index].page;
-		http.httpGet({
+		base.http.httpGet({
 			loading: '加载中',
 			url: url,
 			success: function (result) {

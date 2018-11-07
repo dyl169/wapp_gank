@@ -26,4 +26,8 @@
             </listView>
         </swiper-item>
     </swiper>
+
+	<view class='addView' bindtap='clickAdd'>
+		<image src='../../../res/icon_add.png'></image>
+	</view>
 </view>

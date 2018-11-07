@@ -1,0 +1,6 @@
+{
+	"navigationBarTitleText": "添加干货",
+	"usingComponents": {
+		"titleView": "../../../components/titleView/titleView"
+	}
+}

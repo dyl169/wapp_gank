@@ -1,4 +1,5 @@
 //app.js
+let http = require('/utils/http.js');
 App({
 	onLaunch: function () {
 		var that = this;
@@ -21,6 +22,6 @@ App({
 		})
 	},
 	constants: {
-		userInfo: null
+		http: http,
 	}
 })

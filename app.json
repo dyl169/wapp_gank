@@ -3,7 +3,8 @@
 		"pages/ui/login/login",
 		"pages/ui/main/main",
 		"pages/ui/search/search",
-		"pages/ui/webView/webView"
+		"pages/ui/webView/webView",
+		"pages/ui/add/add"
 	],
 	"window": {
 		"backgroundTextStyle": "dark",

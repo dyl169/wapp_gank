@@ -1,0 +1,36 @@
+<!--pages/ui/add/add.wxml-->
+<view class='pageView'>
+    <!--自定义标题-->
+    <titleView title='添加干货' />
+
+
+    <view class='inputItem'>
+        <text><text class='textColor_red'>*</text>URL：</text>
+        <input placeholder='请输入想要提交的网页地址' value='{{params.url}}' bindinput='changeInput' data-type='url'></input>
+    </view>
+
+    <view class='inputItem'>
+        <text><text class='textColor_red'>*</text>描述：</text>
+        <input placeholder='请输入对干货内容的描述' value='{{params.desc}}' bindinput='changeInput' data-type='desc'></input>
+    </view>
+
+    <view class='inputItem'>
+        <text><text class='textColor_red'>*</text>提交者：</text>
+        <input placeholder='请输入提交者ID' value='{{params.who}}' bindinput='changeInput' data-type='who'></input>
+    </view>
+
+    <view class='typeView'>
+        <view class='typeView_title'><text class='textColor_red'>*</text>类型：</view>
+        <view class='typeView_gridView'>
+            <view class='typeView_gridView_item {{typeIndex == index ? "active" : ""}}' wx:for='{{types}}' wx:key='index' bindtap='clickTypeItem' data-index='{{index}}'>{{item}}</view>
+        </view>
+    </view>
+
+    <view class='inputItem'>
+        <text>测试数据：</text>
+        <switch color='#3BB7F7' bindchange='changeDebug' checked='{{params.debug}}'></switch>
+    </view>
+
+	<button class='btn btn_blue' disabled='{{params.url == "" || params.desc == "" || params.who == "" || params.type == ""}}' bindtap='clickSubmit'>提交</button>
+
+</view>
