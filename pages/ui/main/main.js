@@ -110,6 +110,7 @@ Page({
 		var index = e.detail.current;
 		that.setData({
 			currentTab: index,
+			scrollIntoView: 'navBarTitle_item' + index,
 		})
 		that.httpGetData(index);
 	},
