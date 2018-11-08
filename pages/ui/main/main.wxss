@@ -35,6 +35,7 @@
 .listView {
     width: 100vw;
     height: calc(100vh - 100rpx - 64px);
+	display: block;
 }
 
 .listView_item {

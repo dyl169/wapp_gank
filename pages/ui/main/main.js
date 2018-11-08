@@ -96,7 +96,6 @@ Page({
 	 */
 	clickNavBarTitle: function (e) {
 		var index = e.currentTarget.dataset.index;
-		index = index < 0 ? 0 : index > that.data.navBarTitle.length - 1 ? that.data.navBarTitle.length - 1 : index;
 		that.setData({
 			currentTab: index,
 			scrollIntoView: 'navBarTitle_item' + index,
@@ -108,10 +107,11 @@ Page({
 	 * swiper切换
 	 */
 	swiperChange: function (e) {
-		var index = e.detail.value;
+		var index = e.detail.current;
 		that.setData({
 			currentTab: index,
 		})
+		that.httpGetData(index);
 	},
 
 	/**

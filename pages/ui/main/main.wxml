@@ -10,7 +10,7 @@
         <view id='navBarTitle_item{{index}}' class='navBarTitle_item {{currentTab == index ? "active" : ""}}' wx:for='{{navBarTitle}}' wx:key='index' bindtap='clickNavBarTitle' data-index='{{index}}' scroll-with-animation='{{true}}'>{{item.name}}</view>
     </scroll-view>
 
-    <swiper class='swiper' current='{{currentTab}}' bindtap='swiperChange'>
+    <swiper class='swiper' current='{{currentTab}}' bindchange='swiperChange'>
         <swiper-item class='swiperItem' wx:for='{{navBarTitle}}' wx:key='index'>
             <listView class='listView' length='{{data[index].data.length}}' noMore='{{data[index].currentPage >= data[index].totalPage}}' bind:onRefresh='onRefresh' bind:onLoadMore='onLoadMore'>
                 <view class='listView_item' wx:for='{{data[index].data}}' wx:key='dataIndex' wx:for-item='dataItem' bindtap='clickItem' data-url='{{dataItem.url}}'>
